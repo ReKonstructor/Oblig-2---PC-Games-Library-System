@@ -1,7 +1,7 @@
 # Sprint Review & Retrospective
 
 ## Sprint Review
-**Date:** September 27, 2024
+**Date:** October 6, 2025
 **Attendees:** Thisath Ovin, Halvard Mjelde
 
 ### Demonstrated Features
@@ -23,7 +23,7 @@
 - Rating/review system
 
 ## Sprint Retrospective
-**Date:** September 27, 2024
+**Date:** October 6, 2025
 
 ### What Went Well?
 - Clear division of work between team members

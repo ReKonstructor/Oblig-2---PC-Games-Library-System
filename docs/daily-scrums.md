@@ -1,6 +1,6 @@
 # Daily Scrums Log
 
-## Day 1 - September 26, 2024
+## Day 1 - September 26, 2025
 
 ### Thisath
 - **Yesterday:** Nothing (Sprint start)
@@ -12,7 +12,7 @@
 - **Today:** Set up development environment and documentation
 - **Impediments:** None
 
-## Day 2 - Oktober 6, 2024
+## Day 2 - Oktober 6, 2025
 
 ### Thisath
 - **Yesterday:** Created Game model with tests

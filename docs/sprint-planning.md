@@ -1,8 +1,8 @@
 # Sprint Planning - Assignment 2
 
 ## Sprint Duration
-- Start Date: September 26, 2024
-- End Date: Oktober 6, 2024 () sprint for MVP)
+- Start Date: September 26, 2025
+- End Date: Oktober 6, 2025 () sprint for MVP)
 
 ## Sprint Goal
 "Create a functional MVP that allows users to add games manually to a library, mark them as favorites, and categorize them by genre"
