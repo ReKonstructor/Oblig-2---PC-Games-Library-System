@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Add New Game{% endblock %}
+
+{% block content %}
+<h1>Add New Game</h1>
+
+<form method="POST" class="mt-4">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+    
+    <div class="mb-3">
+        <label for="platform" class="form-label">Platform</label>
+        <input type="text" class="form-control" id="platform" name="platform" value="PC">
+    </div>
+    
+    <div class="mb-3">
+        <label for="genre" class="form-label">Genre</label>
+        <input type="text" class="form-control" id="genre" name="genre" value="Uncategorized">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add Game</button>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

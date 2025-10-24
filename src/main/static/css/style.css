@@ -1,0 +1,41 @@
+/* Custom styles for PC Games Library */
+
+/* Custom navbar styling */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Game table styling */
+.table {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Favorite star styling */
+.favorite-star {
+    color: #ffd700;
+    margin-right: 5px;
+}
+
+/* Button hover effects */
+.btn-outline-warning:hover {
+    color: #fff;
+}
+
+/* Custom alert styling */
+.alert {
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Genre filter buttons */
+.btn-group .btn {
+    margin: 0 2px;
+}
+
+/* Responsive container padding */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
