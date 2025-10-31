@@ -1,4 +1,13 @@
 {
-  "games": [],
-  "next_id": 3
+  "games": [
+    {
+      "id": 4,
+      "title": "Kingdom Come: Deliverance",
+      "platform": "Windows",
+      "genre": "Action",
+      "is_favorite": false,
+      "date_added": "2025-10-31T08:31:20.732067"
+    }
+  ],
+  "next_id": 6
 }

@@ -10,6 +10,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from main.models.game_library import GameLibrary
+from main.models.game import import_game_from_steam
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-here'  # Required for flash messages
@@ -72,6 +73,29 @@ def remove_game(game_id):
     else:
         flash('Game not found', 'error')
     return redirect(url_for('index'))
+
+@app.route('/import-steam', methods=['GET', 'POST'])
+def import_steam():
+    """Import a game from Steam"""
+    if request.method == 'POST':
+        appid = request.form.get('appid', '').strip()
+        if not appid:
+            flash('Steam AppID is required!', 'error')
+            return redirect(url_for('import_steam'))
         
+        try:
+            appid = int(appid)
+            game = import_game_from_steam(appid)
+            if game:
+                saved_game = library.add_game(game.title, game.platform, game.genre)
+                flash(f'Successfully imported: {saved_game.title}', 'success')
+                return redirect(url_for('index'))
+            else:
+                flash('Game not found on Steam', 'error')
+        except ValueError:
+            flash('Invalid Steam AppID', 'error')
+        
+    return render_template('import_steam.html')
+
 if __name__ == "__main__":
     app.run(debug=True)

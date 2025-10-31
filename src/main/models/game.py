@@ -34,3 +34,30 @@ class Game:
         game.is_favorite = data.get('is_favorite', False)
         game.date_added = data.get('date_added')
         return game
+    
+
+import requests
+
+def import_game_from_steam(appid):
+    """
+    Import a game from the Steam API by appid.
+    Returns a Game object or None if not found.
+    """
+    url = f"https://store.steampowered.com/api/appdetails?appids={appid}"
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+        if not data or not data.get(str(appid), {}).get('success'):
+            return None
+        game_data = data[str(appid)]['data']
+        title = game_data.get('name', f"Steam App {appid}")
+        genres = game_data.get('genres', [])
+        genre = genres[0]['description'] if genres else "Uncategorized"
+        platforms = game_data.get('platforms', {})
+        platform = ", ".join([k.capitalize() for k, v in platforms.items() if v]) or "PC"
+        return Game(title=title, platform=platform, genre=genre)
+    except Exception as e:
+        print(f"Error importing from Steam: {e}")
+        return None
+        return game

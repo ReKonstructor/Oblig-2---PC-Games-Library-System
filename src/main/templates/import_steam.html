@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Import Steam Game{% endblock %}
+
+{% block content %}
+<h1>Import Game from Steam</h1>
+
+<div class="row">
+    <div class="col-md-8 col-lg-6">
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Steam Game Import</h5>
+                <p class="card-text text-muted">
+                    Enter a Steam AppID to import the game. You can find the AppID in the URL of any Steam game page:
+                    <br>
+                    <code>https://store.steampowered.com/app/<strong>570</strong>/Dota_2/</code> (570 is the AppID)
+                </p>
+                
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="appid" class="form-label">Steam AppID</label>
+                        <input type="text" class="form-control" id="appid" name="appid" 
+                               placeholder="e.g., 570" required pattern="[0-9]+">
+                        <div class="form-text">Enter only the numeric AppID</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Import Game</button>
+                    <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}
