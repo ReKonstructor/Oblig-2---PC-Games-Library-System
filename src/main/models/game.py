@@ -60,4 +60,3 @@ def import_game_from_steam(appid):
     except Exception as e:
         print(f"Error importing from Steam: {e}")
         return None
-        return game
