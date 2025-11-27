@@ -45,3 +45,55 @@
 - Add GUI using Tkinter
 - Implement actual API integration
 - Add more robust error handling
+
+
+## Sprint 3 Review & Retrospective
+
+**Date:** November 26, 2025
+**Attendees:** Thisath Ovin, Halvard Mjelde
+
+### Sprint 3 Review
+
+#### Demonstrated Features
+1. ✅ Flask route tests with pytest
+2. ✅ Improved error messages for Steam import
+3. ✅ Code documentation with docstrings
+4. ✅ Confirmation dialogs on destructive actions
+5. ✅ Better input validation
+
+#### Completed User Stories
+- **Technical Story:** Flask route testing - DONE
+- **User Story:** Enhanced error handling - DONE
+- **Technical Story:** Code documentation - DONE
+
+#### What Was Not Completed
+- CI/CD pipeline (too complex for timeframe)
+- User authentication (out of MVP scope)
+
+### Sprint 3 Retrospective
+
+#### What Went Well?
+- Flask route tests cover main functionality
+- Error messages are now user-friendly
+- Code is better documented for future maintenance
+- All MVP features working reliably
+- Good test coverage across model and route layers
+
+#### What Could Be Improved?
+- Could have added more edge case tests
+- Should have implemented logging system
+- Could have added more UI polish
+- No actual user testing conducted
+
+#### Lessons Learned
+- Testing Flask routes is straightforward with test client
+- Good error messages improve user experience significantly
+- Documentation while coding is easier than adding it later
+- Three sprints provided good iterative improvement
+
+#### Action Items for Future Projects
+- Implement testing from Sprint 1
+- Add logging infrastructure early
+- Conduct simple user testing each sprint
+- Balance AI usage with manual learning
+- Document architecture decisions as ADRs

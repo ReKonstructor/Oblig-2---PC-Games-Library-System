@@ -76,7 +76,7 @@ def remove_game(game_id):
 
 @app.route('/import-steam', methods=['GET', 'POST'])
 def import_steam():
-    """Import a game from Steam"""
+    """Import a game from Steam with improved error handling"""
     if request.method == 'POST':
         appid = request.form.get('appid', '').strip()
         if not appid:
@@ -91,9 +91,11 @@ def import_steam():
                 flash(f'Successfully imported: {saved_game.title}', 'success')
                 return redirect(url_for('index'))
             else:
-                flash('Game not found on Steam', 'error')
+                flash(f'Could not find game with Steam AppID {appid}. Please verify the AppID is correct.', 'error')
         except ValueError:
-            flash('Invalid Steam AppID', 'error')
+            flash('Invalid Steam AppID. Please enter only numbers.', 'error')
+        except Exception as e:
+            flash(f'Error importing from Steam: {str(e)}', 'error')
         
     return render_template('import_steam.html')
 

@@ -1,0 +1,13 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "Test Game",
+      "platform": "PC",
+      "genre": "Action",
+      "is_favorite": false,
+      "date_added": "2025-11-27T06:21:39.595364"
+    }
+  ],
+  "next_id": 2
+}
